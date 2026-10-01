@@ -1,6 +1,6 @@
 # 🛡️ ALSO Microsoft Security AI Security Policy Templates
 
->A comprehensive collection of Microsoft Security policy templates designed to help organizations securely adopt AI while reducing the risks associated with external third-party AI services, generative AI applications, browser-based AI tools, and local AI assistants running on endpoints.
+>A comprehensive collection of Microsoft Security policy templates designed to help organizations securely adopt AI while reducing the risks associated with external third-party AI services, generative AI applications, browser-based AI tools, and local AI tools and agents running on Windows 11 endpoints.
 
 **Works with Microsoft 365 Business Premium + Defender Suite + Purview Suite and up.**
 
