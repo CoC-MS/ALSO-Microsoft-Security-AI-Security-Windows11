@@ -43,9 +43,9 @@ All files are organized into categories
 
  Minimum Required License |
 |--------------------------|
- Microsoft 365 Business Premium + Defender for Suite + Agent 365 |
- Microsoft 365 E3 + Defender Suite + Agent 365 |
- Microsoft 365 E5 + Agent 365
+ Microsoft 365 Business Premium + Defender for Suite + Agent 365 (for Agent 365 policies) |
+ Microsoft 365 E3 + Defender Suite + Agent 365 (for Agent 365 policies) |
+ Microsoft 365 E5 + Agent 365 (for Agent 365 policies)
  Microsoft 365 E7
 
 ---
