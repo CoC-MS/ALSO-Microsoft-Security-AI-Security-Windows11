@@ -1,6 +1,6 @@
 # 🛡️ ALSO Microsoft Security AI Security Policy Templates
 
->A comprehensive collection of Microsoft Security policy templates designed to help organizations securely adopt AI while reducing the risks associated with external third-party AI services, generative AI applications, browser-based AI tools, and local AI tools and agents running on Windows 11 endpoints.
+>This baseline delivers a hardened Windows 11 configuration that minimizes the risk of unauthorized third-party AI access while maintaining a productive user experience. It restricts application installation and execution, enforces Microsoft Edge as the approved browser, blocks Microsoft Store and proxy bypass methods, limits access to non-Microsoft AI services, and requires compliant corporate-managed devices through Conditional Access policies. The baseline also includes Agent 365 Conditional Access controls for AI agent governance. Although designed as a high-security configuration, all settings can be customized to meet organizational requirements.
 
 **Works with Microsoft 365 Business Premium + Defender Suite + Agent 365 and up.**
 
