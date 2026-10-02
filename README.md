@@ -135,6 +135,39 @@ And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
 
 The policies contained in this repository are designed to be imported using **MickeM's Intune Management Tool**.
 
+
+1. Download Micke M Intune Management Tool from here:  https://github.com/Micke-K/IntuneManagement
+2. Extract folder and Start with start.cmd in the folder (works without local administrator rights on Windows and MacOS)   
+   <img width="635" height="247" alt="image" src="https://github.com/user-attachments/assets/ae7405c2-17cb-43a1-a96e-cd60181a2619" />
+
+3. Command window and UI will open
+4. Press on icon in upper right corner to sign in
+   <img width="1311" height="965" alt="image" src="https://github.com/user-attachments/assets/2e835f79-5e07-4c7d-bd7c-5bd4976fde50" />
+
+5. You may need a Global Administrator to consent to required API permissions first time if have not used these tool before. This can be done after sign-in by pressing same icon in upper right corner once more and press "Request Consent". Command Graph Command Line Tools application will be registered in Entra. Feel free to remove it after import or remove at least admin consent.
+
+   <img width="294" height="145" alt="image" src="https://github.com/user-attachments/assets/675ebdc9-dc87-4633-bfa5-fbb92f7ba53d" />
+
+
+6. After sign in and admin consent navigate to Bulk button in the left upper corner and press Import
+
+   <img width="273" height="202" alt="image" src="https://github.com/user-attachments/assets/9e8b32ce-93fe-4ef8-9c19-325d138add8c" />
+
+7. Download project and unzip folder
+
+<img width="401" height="373" alt="image" src="https://github.com/user-attachments/assets/b4005205-abc8-4e9b-a8b0-d6f919f99c06" />
+
+   
+9. Choose SettingsCatalog, CompliancePolicies, Conditional Access, Named Locations and Authentication context in menu, remove everything else.
+
+> [!IMPORTANT]
+> **10. On Conditional Access state- SELECT OFF. Very important.**
+ 
+Uncheck import assignments if you don't want to to import groups, named locations and authentication context. PS: Many policies will fail on import here.
+
+10. Check results on your tenant and if something is missing in CMD window. 
+
+
 ## After import
 
 # IMPORTANT - AppControl 
@@ -175,7 +208,6 @@ Choose this setting and save
 
 ## Require compliant device on sign in with Conditional Access
 
-Import 
 
 ## BP-ALSO-CA107-Admins-AllApps-Windows-Grant-RequireCompliantDevice
 
@@ -201,6 +233,48 @@ Blocks internal users from signing in using unsupported or unrecognized device p
 
 ```text
 Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df5ea509-9005-47d1-9d00-8852534700ac). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request
+
+
+```
+
+## Agent 365 Conditional Access policies
+
+## 🤖 Agent Policies
+
+> [!IMPORTANT]
+> **All Agent policies (CA501-CA505) require an Agent 365 license to be assigned and Agent 365 portal onboarding to be completed before import. Otherwise, the policies will fail during import and display the following error message.**
+
+```text
+"Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df32d38d-3943-4a55-bfbc-e1e892358ebb). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request."
+```
+
+### A365-ALSO-CA501-Agents-AllApps-AnyPlatform-Block-HighRiskAgent
+
+Prevents agent identities from accessing tenant resources when Microsoft identifies the agent as having a high risk level
+
+---
+
+### A365-ALSO-CA502-Agents-AllAgentIdentities-AllAgentResources-Block-AllExceptSelected
+
+Denies access for all agent identities by default. Only explicitly approved or excluded agents are permitted. Agent approval can also be managed through the Agent 365 portal 
+
+---
+
+### A365-ALSO-CA503-Agents-AllAgentUsers-Grant-RequireCompliantDevice
+
+Restricts agent user access to devices that meet organizational compliance requirements.
+
+---
+
+### A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents
+
+Blocks agent users when Microsoft Entra ID Protection classifies the identity as medium or high risk.
+
+---
+
+### A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Grant-RequireCompliantNetWork
+
+Allows agent user access only from locations connected through the Global Secure Access compliant network.
 
 
 
