@@ -209,10 +209,6 @@ Choose this setting and save
 ## Require compliant device on sign in with Conditional Access
 
 
-## BP-ALSO-CA107-Admins-AllApps-Windows-Grant-RequireCompliantDevice
-
-Allows administrator sign-ins from Windows devices only when the device meets defined compliance requirements. PS: Only 24 admin roles are included ( privileged ). Add more if you feel for it. And set your compliance policies in Windows first of all. Check Intune policy repo to find compliance templates for Windows devices
-
 ## BP-ALSO-CA205-Internals-AllApps-Windows-Grant-RequireCompliantDevice
 
 Requires Windows devices to be compliant before internal users can access cloud applications. Remember to set compliance requirements in Intune for Windows first. Check Windows repo to find compliance templates for Windows. PS: Verify the included group(s) and/or add your custom groups which have all internals in it. ALSO- All Internals is added as an example. This group needs to be imported to Entra, otherwise policy will fail on import with following message:
@@ -220,10 +216,6 @@ Requires Windows devices to be compliant before internal users can access cloud 
 ```text
 Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df5ea509-9005-47d1-9d00-8852534700ac). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request
 ```
-
-## BP-ALSO-CA109-Admins-AllApps-AnyPlatform-Block-UnknownPlatforms
-
-Prevents administrator access from unsupported device platforms, allowing only approved operating systems Windows, MacOS, Android, iOS/IpadOS.  PS: Only 24 admin roles are included ( privileged ). Add more if you feel for it.
 
 ---
 
@@ -277,4 +269,6 @@ Blocks agent users when Microsoft Entra ID Protection classifies the identity as
 Allows agent user access only from locations connected through the Global Secure Access compliant network.
 
 
+## Issues?
 
+Open issue here: https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/issues
