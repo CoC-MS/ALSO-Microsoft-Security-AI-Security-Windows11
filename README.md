@@ -183,7 +183,7 @@ Uncheck import assignments if you don't want to to import groups, named location
 
 ## After import
 
-# AppControl/WDAC
+# AppControl
 
 App Control Managed Installer policy can't be improted as .json and needs to be setup manually, set it up before deploying App Control policy to your devices. Remember to double check that IME - Intune Managed Extension is installed on device, before enforcing policy for AppControl otherwise it wouldn't work. If it's not installing IME extension with Installer policy, than try to deploy an WIN32 app from Intune first
 
