@@ -50,22 +50,6 @@ All files are organized into categories
 
 ---
 
-## 📖 Naming Convention
-
-All policy templates follow the naming format below:
-
-```text
-<ALSO>-<ImpactLevel>-<MinimumLicense>-<BaselineLevel>-<Version>-<OS>-<Main Category>-<Sub Category>-<Settings>-<Assignment>
-```
-
-### Example
-
-```text
-ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust apps from managed installer only - D
-```
-
----
-
 ## 🧩 Naming Components Device policies 
 
 | Component | Description |
