@@ -135,7 +135,9 @@ And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
 
 The policies contained in this repository are designed to be imported using **MickeM's Intune Management Tool**.
 
-## IMPORTANT - AppControl 
+## After import
+
+# IMPORTANT - AppControl 
 
 App Control Managed Installer policy can't be improted as .json and needs to be setup manually, set it up before deploying App Control policy to your devices. Remember to double check that IME - Intune Managed Extension is installed on device, before enforcing policy for AppControl otherwise it wouldn't work. If it's not installing IME extension with Installer policy, than try to deploy an WIN32 app from Intune first
 
@@ -182,6 +184,10 @@ Import
 ## BP-ALSO-CA109-Admins-AllApps-AnyPlatform-Block-UnknownPlatforms
 
 ## BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms
+
+## Agent Conditional Access policies 
+
+
 
 ## Issues?
 Open issue here: https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/issues 
