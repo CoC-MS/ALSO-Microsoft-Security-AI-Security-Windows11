@@ -14,7 +14,7 @@
 | Resource | Description |
 |-----------|-------------|
 | 🛡️ **Security Information** | [View Security Policy](https://github.com/CoC-MS/ALSO-Microsoft-Security-WindowsServer?tab=security-ov-file) |
-| 📖 **Supported licenses** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-WindowsServer?tab=readme-ov-file#works-with-following-licenses) |
+| 📖 **Supported licenses** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/blob/main/README.md#works-with-following-licenses) |
 | 📖 **Before importing ALSO_WINDOWSSERVER_POLICIES** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11#before-importing-also_ai_security_policies) |
 
 ----
