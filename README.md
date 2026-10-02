@@ -181,5 +181,5 @@ Import
 ## BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms
 
 ## Issues?
-Open issue here: https://github.com/CoC-MS/ALSO-Microsoft-Security-WindowsServer/issues 
+Open issue here: https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/issues 
 
