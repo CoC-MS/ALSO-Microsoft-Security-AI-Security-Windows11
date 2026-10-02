@@ -32,6 +32,10 @@ All files are organized into categories
 4 Compliance policies
 ├── ALSO_AI_SECURITY_POLICIES/ConditionalAccess
 9 Conditional Access policies
+├── ALSO_AI_SECURITY_POLICIES/Groups
+6 security groups for Conditional Access policies
+├── ALSO_AI_SECURITY_POLICIES/NamedLocations
+1 Named Location for Conditional Access policy
 
 ```
 
