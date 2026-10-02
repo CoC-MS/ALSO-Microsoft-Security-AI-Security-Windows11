@@ -137,7 +137,7 @@ Policy name: ALSO – HI – BP – Advanced – v1.0- Windows -WDAC/AppControl-
 <img width="1170" height="712" alt="image" src="https://github.com/user-attachments/assets/39cc4df6-c872-4e45-9c98-88323cba8c4b" />
 
 
-## Blocking access to all known mon-Microsoft AI Sites
+## Blocking access to all known Non-Microsoft AI Sites
 
 Once Defender for Endpoint and Cloud App integration is setup and you have device group in Defender go to Cloud Apps-> Cloud Apps Catalog --> Select All Gen AI and other AI apps , exclude non MS apps by tagging NON MS apps as Microsoft and than create a filter like on last picture
 
