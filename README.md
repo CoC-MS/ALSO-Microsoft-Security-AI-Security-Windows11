@@ -66,7 +66,7 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
 ---
 
-## 🧩 Naming Components
+## 🧩 Naming Components Device policies 
 
 | Component | Description |
 |-----------|-------------|
@@ -75,11 +75,24 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 | **MinimumLicense** | Minimum Microsoft license required to use the policy |
 | **BaselineLevel** | Baseline level of policy, Basic, Advanced |
 | **Version** | Policy version, v1.0, v1.1 etc|
-| **MacOS** | Operating system |
+| **Windows** | Operating system |
 | **MainCategory** | Name of main category, Device Configuration, Device Compliance etc|
 | **SubCategory** | Name of sub category, MDE, AV, Disk etc|
 | **Settings** | Short settings description |
 | **Assignment** | Assignment scope- device (D) or user (U)|
+
+## 🧩 Naming Components Conditional Access policies 
+
+| Component | Description |
+|-----------|-------------|
+| **MinimumLicense** | Minimum Microsoft license required to use the policy |
+| **ALSO** | Company providing the policy template to have a better control |
+| **CA###** | Unique Conditional Access policy number |
+| **Persona** | Target user persona |
+| **Apps** | Applications targeted by the policy |
+| **Platforms** | Platforms targeted by the policy |
+| **AccessControls** | Determines whether access is granted or blocked |
+| **SessionControls** | Controls enforced by the policy |
 
 
 ## Before importing ALSO_AI_SECURITY_POLICIES
