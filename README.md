@@ -82,7 +82,7 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
 ## Prerequisites
 
--  **Microsoft Intune**
+# **Microsoft Intune**
   - Microsoft Intune must be configured as the Mobile Device Management (MDM) authority.
 
   intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
@@ -90,7 +90,7 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
   <img width="1115" height="807" alt="image" src="https://github.com/user-attachments/assets/ae1527dd-0e7f-46c0-b63e-18d8f24ec2db" />
 
 
--  **Microsoft Defender for Endpoint Integration**
+#  **Microsoft Defender for Endpoint Integration**
   - In the Microsoft Defender portal, navigate to:
 
     Settings -> Endpoint 
@@ -100,7 +100,7 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
   
 
--  **Microsoft Defender for Cloud Apps Integration**
+ # **Microsoft Defender for Cloud Apps Integration**
   - In the Microsoft Defender portal, navigate to:
     
    Settings -> Endpoints 
@@ -109,8 +109,12 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
   <img width="1467" height="1081" alt="image" src="https://github.com/user-attachments/assets/018f04ec-5ab3-4577-9f39-41f53b1fca68" />
 
+And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
 
--  **Endpoint Features**
+<img width="1415" height="822" alt="image" src="https://github.com/user-attachments/assets/d87e30ea-ced1-46e5-a815-ff1cb81ea8e0" />
+
+
+#  **Endpoint Features**
   - In the Microsoft Defender portal, navigate to:
 
     Settings -> Endpoints 
@@ -124,7 +128,7 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
 ---
 
-# Importing the Policies
+# **Importing the Policies**
 
 The policies contained in this repository are designed to be imported using **MickeM's Intune Management Tool**.
 
