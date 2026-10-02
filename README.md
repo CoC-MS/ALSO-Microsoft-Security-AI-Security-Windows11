@@ -1,4 +1,4 @@
-# 🛡️ ALSO Microsoft Security AI Security Policy Templates
+# 🛡️ ALSO Microsoft Security AI Security Windows 11 Policy Templates
 
 >This baseline delivers a hardened Windows 11 configuration that minimizes the risk of unauthorized third-party AI access while maintaining a productive user experience. It restricts application installation and execution, enforces Microsoft Edge as the approved browser, blocks Microsoft Store and proxy bypass methods, limits access to non-Microsoft AI services, and requires compliant corporate-managed devices through Conditional Access policies. The baseline also includes Agent 365 Conditional Access controls for AI agent governance. Although designed as a high-security configuration, all settings can be customized to meet organizational requirements.
 
