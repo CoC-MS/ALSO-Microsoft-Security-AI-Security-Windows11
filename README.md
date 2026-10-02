@@ -2,7 +2,7 @@
 
 >This baseline delivers a hardened Windows 11 configuration that minimizes the risk of unauthorized third-party AI access while maintaining a productive user experience. It restricts application installation and execution, enforces Microsoft Edge as the approved browser, blocks Microsoft Store and proxy bypass methods, limits access to non-Microsoft AI services, and requires compliant corporate-managed devices through Conditional Access policies. The baseline also includes Agent 365 Conditional Access controls for AI agent governance. Although designed as a high-security configuration, all settings can be customized to meet organizational requirements.
 
-**Works with Microsoft 365 Business Premium + Defender Suite + Agent 365 and up.**
+**Works with Microsoft 365 Business Premium + Defender Suite + Agent 365 (for Agent 365 policies) and up.**
 
 > [!IMPORTANT]
 > **⚠️ IMPORTANT: This solution works only on corporate owned Windows 11 devices.**
