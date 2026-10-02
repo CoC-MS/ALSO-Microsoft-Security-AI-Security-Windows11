@@ -80,9 +80,8 @@ ALSO – LI – BP – Basic – v1.0– WindowsS – WDAC/Appcontrol - Trust ap
 
 ## Before importing ALSO_AI_SECURITY_POLICIES
 
-## Prerequisites
 
-# **Microsoft Intune**
+# **Microsoft Intune setup**
   - Microsoft Intune must be configured as the Mobile Device Management (MDM) authority.
 
   intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
