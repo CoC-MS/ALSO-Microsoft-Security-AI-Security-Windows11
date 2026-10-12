@@ -15,7 +15,7 @@
 
 Choose one standalone package. The available packages are cumulative: E7 contains every BP artifact plus the five Agent 365 Conditional Access policies.
 
-### ✅ [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7) — full experience
+### ✅ [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7) — Full experience
 
 Use: when the tenant is licensed for all policies, including Agent 365.
 
@@ -28,7 +28,7 @@ Use: when the tenant is licensed for all policies, including Agent 365.
 | Microsoft 365 F3 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
 | Microsoft 365 F1 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
 
-### ⚠️ [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) — without Agent 365 policies
+### ⚠️ [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) — Limited experience- without Agent 365 policies
 
 Use this package for the baseline Windows 11 artifacts and the two BP Conditional Access policies. It excludes policies tagged `A365`.
 
