@@ -11,6 +11,63 @@
 > [!IMPORTANT]
 > **⚠️ IMPORTANT: Read this before importing and using any policies.**
 
+## Windows 11 AI Security Licensing Guide
+
+Choose one standalone package. The packages are cumulative: E5 contains every BP-compatible export plus any E5-only exports. The current repository has no E5-only exports, so both packages contain the same 39 source artifacts.
+
+### ✅ `ALSO_W11AISECURITY_E7` — full experience
+
+Use: when the tenant is licensed for all policies, including Agent 365.
+
+| License | Experience |
+| --- | --- |
+| Microsoft 365 E7 | ✅ Full support |
+| Microsoft 365 E5 + Agent 365 | ✅ Full support |
+| Microsoft 365 E3 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
+| Business Premium + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
+| Microsoft 365 F3 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
+| Microsoft 365 F1 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
+
+### ⚠️ `ALSO_W11AISECURITY_E5` — without Agent 365 policies
+
+Use [`ALSO_CA_E5`](ALSO_CA_E5) for all standard BP and E5 Conditional Access policies, excluding policies tagged `A365`.
+
+| License | Experience |
+| --- | --- |
+| Microsoft 365 E5 | ✅ Supports all policies except A365 |
+| Microsoft 365 E3 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
+| Business Premium + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
+| Microsoft 365 F3 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
+| Microsoft 365 F1 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
+
+### ⚠️ `ALSO_W11AISECURITY_BP` — baseline policies
+
+Use [`ALSO_CA_BP`](ALSO_CA_BP) for baseline Conditional Access policies. This package excludes policies tagged `E5` and `A365`.
+
+| License | Experience |
+| --- | --- |
+| Microsoft 365 E3 | ⚠️ Excludes A365 and E5 policies |
+| Microsoft 365 Business Premium | ⚠️ Excludes A365 and E5 policies |
+| Microsoft 365 F3 | ⚠️ Excludes A365 and E5 policies |
+| Microsoft 365 F1 | ⚠️ Excludes A365 and E5 policies |
+
+#### Microsoft 365 F3 Limitations
+
+For Microsoft 365 F3, only the following Microsoft Defender security settings are supported:
+
+- Defender Antivirus
+- Microsoft Defender Firewall
+- Exploit Guard
+- Credential Guard
+- BitLocker
+- BitLocker To Go
+
+All other Defender-related configurations may require additional licensing.
+
+> **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
+
+
+
 | Resource | Description |
 |-----------|-------------|
 | 🛡️ **Security Information** | [View Security Policy](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file) |
@@ -39,14 +96,6 @@ All files are organized into categories
 
 ```
 
-### Works with following licenses
-
- Minimum Required License |
-|--------------------------|
- Microsoft 365 Business Premium + Defender for Suite + Agent 365 (for Agent 365 policies) |
- Microsoft 365 E3 + Defender Suite + Agent 365 (for Agent 365 policies) |
- Microsoft 365 E5 + Agent 365 (for Agent 365 policies)
- Microsoft 365 E7
 
 ---
 
