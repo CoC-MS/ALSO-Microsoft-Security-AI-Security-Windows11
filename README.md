@@ -5,7 +5,7 @@
 **Works with Microsoft 365 Business Premium + Defender Suite + Agent 365 (for Agent 365 policies) and up.**
 
 > [!IMPORTANT]
-> **⚠️ IMPORTANT: This solution works only on corporate owned Windows 11 devices.**
+> **⚠️ IMPORTANT: This solution works only on Intune enrolled corporate owned Windows 11 devices.**
 ---
 
 > [!IMPORTANT]
