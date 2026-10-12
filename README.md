@@ -43,10 +43,10 @@ Use this package for the baseline Windows 11 artifacts and the two BP Conditiona
 | Business Premium + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
 | Microsoft 365 F3 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
 | Microsoft 365 F1 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
-| Microsoft 365 E3 | ⚠️ Excludes A365 and E5 policies |
-| Microsoft 365 Business Premium | ⚠️ Excludes A365 and E5 policies |
-| Microsoft 365 F3 | ⚠️ Excludes A365 and E5 policies |
-| Microsoft 365 F1 | ⚠️ Excludes A365 and E5 policies |
+| Microsoft 365 E3 | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering)|
+| Microsoft 365 Business Premium | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering) |
+| Microsoft 365 F3 | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering) |
+| Microsoft 365 F1 | ⚠️ All policies except Defender and A365 |
 
 #### Microsoft 365 F3 Limitations
 
@@ -61,7 +61,7 @@ For Microsoft 365 F3, only the following Microsoft Defender security settings ar
 
 All other Defender-related configurations may require additional licensing.
 
-> **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
+> **Important:** Microsoft 365 F1 supports deployment of Intune configuration and BP Conditional access policies only. Microsoft Defender security policy settings and A365 Conditional access policies included in this repository are not supported with F1 licensing.
 
 
 ---
