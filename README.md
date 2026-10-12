@@ -38,11 +38,11 @@ Use this package for the baseline Windows 11 artifacts and the two BP Conditiona
 
 | License | Experience |
 | --- | --- |
-| Microsoft 365 E5 | ✅ Supports all policies except A365 |
-| Microsoft 365 E3 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
-| Business Premium + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
-| Microsoft 365 F3 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
-| Microsoft 365 F1 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
+| Microsoft 365 E5 | ⚠️ Supports all policies except A365 |
+| Microsoft 365 E3 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
+| Business Premium + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
+| Microsoft 365 F3 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
+| Microsoft 365 F1 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
 | Microsoft 365 E3 | ⚠️ Excludes A365 and E5 policies |
 | Microsoft 365 Business Premium | ⚠️ Excludes A365 and E5 policies |
 | Microsoft 365 F3 | ⚠️ Excludes A365 and E5 policies |

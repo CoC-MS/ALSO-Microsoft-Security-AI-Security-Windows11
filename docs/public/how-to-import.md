@@ -28,6 +28,9 @@ The policies contained in this repository are designed to be imported using **Mi
 
 7. Download project and unzip folder
 
+> [!IMPORTANT]
+> **We highly recommend extracting the downloaded folder to a OneDrive location. Otherwise, some policies with long filenames may fail to extract.**
+
 <img width="401" height="373" alt="image" src="https://github.com/user-attachments/assets/b4005205-abc8-4e9b-a8b0-d6f919f99c06" />
 
 
