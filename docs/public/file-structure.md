@@ -2,28 +2,59 @@
 
 [Public documentation](README.md)
 
-The `ALSO_AI_SECURITY_POLICIES` directory contains pre-generated policy and supporting JSON exports. The current repository structure is:
+The repository exposes two standalone top-level packages:
 
 ```text
 /
-├── ALSO_AI_SECURITY_POLICIES/
-│   ├── CompliancePolicies/    4 JSON exports
-│   ├── ConditionalAccess/     7 JSON exports
-│   ├── Groups/                4 JSON exports
-│   ├── NamedLocations/        1 JSON export
-│   ├── SettingsCatalog/      12 JSON exports
-│   └── MigrationTable.json    Supporting JSON file
+├── ALSO_AI_SECURITY_WINDOWS11_BP/   24 JSON files
+│   ├── CompliancePolicies/           4
+│   ├── ConditionalAccess/            2
+│   ├── Groups/                       4
+│   ├── NamedLocations/               1
+│   ├── SettingsCatalog/             12
+│   └── MigrationTable.json           1
+├── ALSO_AI_SECURITY_WINDOWS11_E7/   29 JSON files
+│   ├── CompliancePolicies/           4
+│   ├── ConditionalAccess/            7
+│   ├── Groups/                       4
+│   ├── NamedLocations/               1
+│   ├── SettingsCatalog/             12
+│   └── MigrationTable.json           1
 └── docs/
-    └── public/                Documentation preview
+    └── public/
 ```
 
 | Folder or file | Contents | Review before use |
 | --- | --- | --- |
-| [ConditionalAccess](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/) | Seven policies, including internal-user and Agent 365 controls. | Select only the policies that fit the tenant; import them in **OFF** state. |
-| [CompliancePolicies](../../ALSO_AI_SECURITY_POLICIES/CompliancePolicies/) | Four compliance policy exports. | Review the requirements and assignments for managed Windows devices. |
-| [Groups](../../ALSO_AI_SECURITY_POLICIES/Groups/) | Four group exports used as Conditional Access support resources. | Review membership and references; the internal-users group is an example. |
-| [NamedLocations](../../ALSO_AI_SECURITY_POLICIES/NamedLocations/) | One named-location export. | Confirm the location values and any compliant-network dependencies. |
-| [SettingsCatalog](../../ALSO_AI_SECURITY_POLICIES/SettingsCatalog/) | Twelve device configuration policy exports. | Review each setting and its user/device assignment scope. |
-| [MigrationTable.json](../../ALSO_AI_SECURITY_POLICIES/MigrationTable.json) | Supporting migration data. | Use with the repository's import workflow; verify destination mappings and references. |
+| `ConditionalAccess` | Two BP policies in both packages; five additional A365 policies in E7 only. | Select only policies that fit the tenant; import them in **OFF** state. |
+| `CompliancePolicies` | Four compliance policy exports. | Review requirements and assignments for managed Windows devices. |
+| `Groups` | Four group exports used as Conditional Access support resources. | Review membership and references; the internal-users group is an example. |
+| `NamedLocations` | One named-location export. | Confirm location values and compliant-network dependencies. |
+| `SettingsCatalog` | Twelve device configuration policy exports. | Review each setting and its user/device assignment scope. |
+| `MigrationTable.json` | Supporting migration data. | Verify destination mappings and references. |
 
-Counts describe the files currently present, not unique destination objects or recommended assignments. Review the JSON content and [policy-specific guidance](conditional-access-policies.md) rather than relying on folder names alone.
+Counts describe files, not unique destination objects or recommended assignments. Choose exactly one package and review the [policy collections](policy-collections.md).
+
+## Previously authored file-structure wording
+
+## 📂 File Structure
+
+All files are organized into categories
+
+```text
+/ALSO-Microsoft-Security-WindowsServer
+├── ALSO_AI_SECURITY_POLICIES/SettingsCatalog
+12 SettingsCatalog policies
+├── ALSO_AI_SECURITY_POLICIES/CompliancePolicies
+4 Compliance policies
+├── ALSO_AI_SECURITY_POLICIES/ConditionalAccess
+7 Conditional Access policies
+├── ALSO_AI_SECURITY_POLICIES/Groups
+4 security groups for Conditional Access policies
+├── ALSO_AI_SECURITY_POLICIES/NamedLocations
+1 Named Location for Conditional Access policy
+
+```
+
+
+---

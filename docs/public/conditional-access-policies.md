@@ -2,27 +2,67 @@
 
 [Public documentation](README.md)
 
-This guide summarizes the Conditional Access exports in `ALSO_AI_SECURITY_POLICIES/ConditionalAccess`. Review each JSON's complete conditions, assignments, exclusions, grant controls, and session controls before use; names alone do not describe the full configuration.
+Review each JSON's complete conditions, assignments, exclusions, grant controls, and session controls before use; names alone do not describe the full configuration.
 
 > [!IMPORTANT]
-> Import Conditional Access policies in **OFF** state. Review the target groups and dependencies, and test the intended sign-in behavior before enabling policies.
+> Import Conditional Access policies in **OFF** state. Review target groups and dependencies, and test intended sign-in behavior before enabling policies.
 
-| Policy | Export | Purpose described by the repository |
-| --- | --- | --- |
-| CA204 | [BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms.json) | Blocks internal users from signing in on unsupported or unrecognized device platforms. |
-| CA205 | [BP-ALSO-CA205-Internals-AllApps-Windows-Grant-RequireCompliantDevice](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/BP-ALSO-CA205-Internals-AllApps-Windows-Grant-RequireCompliantDevice.json) | Requires Windows devices to be compliant before internal users access cloud applications. |
-| CA501 | [A365-ALSO-CA501-Agents-AllApps-AnyPlatform-Block-HighRiskAgent](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/A365-ALSO-CA501-Agents-AllApps-AnyPlatform-Block-HighRiskAgent.json) | Blocks agent identities Microsoft identifies as high risk from accessing tenant resources. |
-| CA502 | [A365-ALSO-CA502-Agents-AllAgentIdentities-AllAgentResources-Block-AllExceptSelected](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/A365-ALSO-CA502-Agents-AllAgentIdentities-AllAgentResources-Block-AllExceptSelected.json) | Blocks agent identities by default, allowing only the agents explicitly selected or excluded. |
-| CA503 | [A365-ALSO-CA503-Agents-AllAgentUsers-Grant-RequireCompliantDevice](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/A365-ALSO-CA503-Agents-AllAgentUsers-Grant-RequireCompliantDevice.json) | Requires compliant devices for agent-user access. |
-| CA504 | [A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents.json) | Blocks agent users Microsoft Entra ID Protection classifies as medium or high risk. |
-| CA505 | [A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Grant-RequireCompliantNetWork](../../ALSO_AI_SECURITY_POLICIES/ConditionalAccess/A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Grant-RequireCompliantNetWork.json) | Allows agent-user access only from locations connected through the Global Secure Access compliant network. |
+| Package | Policies |
+| --- | --- |
+| BP | CA204 and CA205 |
+| E7 | CA204, CA205, and CA501–CA505 |
 
-### Review before enabling
+## BP policies
 
-- CA204 and CA205 use the `ALSO- All Internals` group as an example. Verify its membership or replace it with the intended users before deployment.
-- CA205 depends on Windows compliance requirements being configured in Intune. Review the referenced group and any exclusions.
-- CA501–CA505 require an Agent 365 licence and Agent 365 portal onboarding, according to the repository's import guidance. Leave them unselected until those prerequisites are met.
-- CA502 blocks agent identities by default. Define and verify the intended allowed-agent exclusions before enabling it.
-- CA505 depends on a correctly configured compliant network; importing the named location does not configure Global Secure Access.
+### BP-ALSO-CA205-Internals-AllApps-Windows-Grant-RequireCompliantDevice
 
-See [Prerequisites](prerequisites.md) and [How to import](how-to-import.md) before deployment.
+Requires Windows devices to be compliant before internal users can access cloud applications. Remember to set compliance requirements in Intune for Windows first. Check Windows repo to find compliance templates for Windows. PS: Verify the included group(s) and/or add your custom groups which have all internals in it. ALSO- All Internals is added as an example. This group needs to be imported to Entra, otherwise policy will fail on import with following message:
+
+See the preserved error in [Dependencies and import errors](dependencies-and-import-errors.md).
+
+---
+
+### BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms
+
+Blocks internal users from signing in using unsupported or unrecognized device platforms. PS: Verify the included group(s) and/or add your custom groups which have all internals in it. ALSO- All Internals is added as an example. This group needs to be imported to Entra, otherwise policy will fail on import with following message:
+
+See the preserved error in [Dependencies and import errors](dependencies-and-import-errors.md).
+
+## Agent 365 Conditional Access policies
+
+## 🤖 Agent Policies
+
+> [!IMPORTANT]
+> **All Agent policies (CA501-CA505) require an Agent 365 license to be assigned and Agent 365 portal onboarding to be completed before import. Otherwise, the policies will fail during import and display the following error message.**
+
+See the preserved error in [Dependencies and import errors](dependencies-and-import-errors.md).
+
+### A365-ALSO-CA501-Agents-AllApps-AnyPlatform-Block-HighRiskAgent
+
+Prevents agent identities from accessing tenant resources when Microsoft identifies the agent as having a high risk level
+
+---
+
+### A365-ALSO-CA502-Agents-AllAgentIdentities-AllAgentResources-Block-AllExceptSelected
+
+Denies access for all agent identities by default. Only explicitly approved or excluded agents are permitted. Agent approval can also be managed through the Agent 365 portal
+
+---
+
+### A365-ALSO-CA503-Agents-AllAgentUsers-Grant-RequireCompliantDevice
+
+Restricts agent user access to devices that meet organizational compliance requirements.
+
+---
+
+### A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents
+
+Blocks agent users when Microsoft Entra ID Protection classifies the identity as medium or high risk.
+
+---
+
+### A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Grant-RequireCompliantNetWork
+
+Allows agent user access only from locations connected through the Global Secure Access compliant network.
+
+The current E7 artifact is named `A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Block-RequireCompliantNetWork.json`, matching the current Conditional Access repository source. Review its JSON settings rather than relying on historical wording.

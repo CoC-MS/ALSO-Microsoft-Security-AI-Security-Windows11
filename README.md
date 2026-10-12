@@ -13,9 +13,9 @@
 
 ## Windows 11 AI Security Licensing Guide
 
-Choose one standalone package. The packages are cumulative: E5 contains every BP-compatible export plus any E5-only exports. The current repository has no E5-only exports, so both packages contain the same 39 source artifacts.
+Choose one standalone package. The available packages are cumulative: E7 contains every BP artifact plus the five Agent 365 Conditional Access policies.
 
-### ✅ `ALSO_W11AISECURITY_E7` — full experience
+### ✅ [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7) — full experience
 
 Use: when the tenant is licensed for all policies, including Agent 365.
 
@@ -28,9 +28,9 @@ Use: when the tenant is licensed for all policies, including Agent 365.
 | Microsoft 365 F3 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
 | Microsoft 365 F1 + Defender Suite + Purview Suite + Agent 365 | ✅ Full support |
 
-### ⚠️ `ALSO_W11AISECURITY_E5` — without Agent 365 policies
+### ⚠️ [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) — without Agent 365 policies
 
-Use [`ALSO_CA_E5`](ALSO_CA_E5) for all standard BP and E5 Conditional Access policies, excluding policies tagged `A365`.
+Use this package for the baseline Windows 11 artifacts and the two BP Conditional Access policies. It excludes policies tagged `A365`.
 
 | License | Experience |
 | --- | --- |
@@ -39,13 +39,6 @@ Use [`ALSO_CA_E5`](ALSO_CA_E5) for all standard BP and E5 Conditional Access pol
 | Business Premium + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
 | Microsoft 365 F3 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
 | Microsoft 365 F1 + Defender Suite and/or Purview Suite | ✅ Supports all policies except A365 |
-
-### ⚠️ `ALSO_W11AISECURITY_BP` — baseline policies
-
-Use [`ALSO_CA_BP`](ALSO_CA_BP) for baseline Conditional Access policies. This package excludes policies tagged `E5` and `A365`.
-
-| License | Experience |
-| --- | --- |
 | Microsoft 365 E3 | ⚠️ Excludes A365 and E5 policies |
 | Microsoft 365 Business Premium | ⚠️ Excludes A365 and E5 policies |
 | Microsoft 365 F3 | ⚠️ Excludes A365 and E5 policies |
@@ -66,255 +59,78 @@ All other Defender-related configurations may require additional licensing.
 
 > **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
 
+<details>
+<summary>Previously authored package wording preserved verbatim</summary>
 
+```text
+Choose one standalone package. The packages are cumulative: E5 contains every BP-compatible export plus any E5-only exports. The current repository has no E5-only exports, so both packages contain the same 39 source artifacts.
+
+### ✅ `ALSO_W11AISECURITY_E7` — full experience
+
+### ⚠️ `ALSO_W11AISECURITY_E5` — without Agent 365 policies
+
+Use [`ALSO_CA_E5`](ALSO_CA_E5) for all standard BP and E5 Conditional Access policies, excluding policies tagged `A365`.
+
+### ⚠️ `ALSO_W11AISECURITY_BP` — baseline policies
+
+Use [`ALSO_CA_BP`](ALSO_CA_BP) for baseline Conditional Access policies. This package excludes policies tagged `E5` and `A365`.
+```
+
+</details>
+
+---
 
 | Resource | Description |
-|-----------|-------------|
+| --- | --- |
+| 📖 **[Public documentation](docs/public/README.md)** | Start with the complete documentation index. |
+| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Review licensing, tenant preparation, and deployment readiness. |
+| 🤖 **[Platform and AI prerequisites](docs/public/platform-and-ai-prerequisites.md)** | Configure Intune, Defender, Defender for Cloud Apps, App Control, AI-site controls, proxy controls, and Teams. |
+| 📦 **[Policy collections](docs/public/policy-collections.md)** | Compare the package contents and select one standalone package. |
+| 🔐 **[Conditional Access policy guide](docs/public/conditional-access-policies.md)** | Review the internal-user and Agent 365 Conditional Access policies. |
+| 🧩 **[Dependencies and import errors](docs/public/dependencies-and-import-errors.md)** | Resolve referenced groups, compliant-device prerequisites, networks, and concrete Graph errors. |
+| 📖 **[Policy naming](docs/public/policy-naming.md)** | Understand the device and Conditional Access naming components. |
+| 📂 **[File structure](docs/public/file-structure.md)** | Locate each package and artifact category. |
+| 📥 **[How to import](docs/public/how-to-import.md)** | Import a selected package in OFF state and validate it. |
+| 🐛 **[Reporting issues](docs/public/reporting-issues.md)** | Report problems without exposing tenant information. |
 | 🛡️ **Security Information** | [View Security Policy](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file) |
-| 📖 **Supported licenses** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/blob/main/README.md#works-with-following-licenses) |
-| 📖 **Before importing ALSO_AI_SECURITY_POLICIES** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11#before-importing-also_ai_security_policies) |
-
-----
-
-
-## 📂 File Structure
-
-All files are organized into categories
-
-```text
-/ALSO-Microsoft-Security-WindowsServer
-├── ALSO_AI_SECURITY_POLICIES/SettingsCatalog
-12 SettingsCatalog policies
-├── ALSO_AI_SECURITY_POLICIES/CompliancePolicies
-4 Compliance policies
-├── ALSO_AI_SECURITY_POLICIES/ConditionalAccess
-7 Conditional Access policies
-├── ALSO_AI_SECURITY_POLICIES/Groups
-4 security groups for Conditional Access policies
-├── ALSO_AI_SECURITY_POLICIES/NamedLocations
-1 Named Location for Conditional Access policy
-
-```
-
+| 📜 **[License](LICENSE)** | Read the repository license. |
 
 ---
 
-## 🧩 Naming Components Device policies 
-
-| Component | Description |
-|-----------|-------------|
-| **ALSO** | Company providing the policy template to have a better control |
-| **Impact** | Impact level of policy, low (LI), medium (MI) or high (HI) |
-| **MinimumLicense** | Minimum Microsoft license required to use the policy |
-| **BaselineLevel** | Baseline level of policy, Basic, Advanced |
-| **Version** | Policy version, v1.0, v1.1 etc|
-| **Windows** | Operating system |
-| **MainCategory** | Name of main category, Device Configuration, Device Compliance etc|
-| **SubCategory** | Name of sub category, MDE, AV, Disk etc|
-| **Settings** | Short settings description |
-| **Assignment** | Assignment scope- device (D) or user (U)|
-
-## 🧩 Naming Components Conditional Access policies 
-
-| Component | Description |
-|-----------|-------------|
-| **MinimumLicense** | Minimum Microsoft license required to use the policy |
-| **ALSO** | Company providing the policy template to have a better control |
-| **CA###** | Unique Conditional Access policy number |
-| **Persona** | Target user persona |
-| **Apps** | Applications targeted by the policy |
-| **Platforms** | Platforms targeted by the policy |
-| **AccessControls** | Determines whether access is granted or blocked |
-| **SessionControls** | Controls enforced by the policy |
-
-
-## Before importing ALSO_AI_SECURITY_POLICIES
-
-
-# **Microsoft Intune setup**
-  - Microsoft Intune must be configured as the Mobile Device Management (MDM) authority.
-
-  intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
-
-  <img width="1115" height="807" alt="image" src="https://github.com/user-attachments/assets/ae1527dd-0e7f-46c0-b63e-18d8f24ec2db" />
-
-
-#  **Microsoft Defender for Endpoint Integration**
-  - In the Microsoft Defender portal, navigate to:
-
-    Settings -> Endpoint 
-    
-  - Enable the **Microsoft Intune connection**.
-<img width="1451" height="609" alt="image" src="https://github.com/user-attachments/assets/fed83e08-2029-4e95-9775-16d872e20bdc" />
-
-  
-
- # **Microsoft Defender for Cloud Apps Integration**
-  - In the Microsoft Defender portal, navigate to:
-    
-   Settings -> Endpoints 
-   
-  - Microsoft Defender for Cloud Apps (MDCA)
-
-  <img width="1467" height="1081" alt="image" src="https://github.com/user-attachments/assets/018f04ec-5ab3-4577-9f39-41f53b1fca68" />
-
-And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
-
-<img width="1415" height="822" alt="image" src="https://github.com/user-attachments/assets/d87e30ea-ced1-46e5-a815-ff1cb81ea8e0" />
-
-
-#  **Endpoint Features**
-  - In the Microsoft Defender portal, navigate to:
-
-    Settings -> Endpoints 
-
-  - Ensure the following features are enabled:
-    - Custom Network Indicators
-    - Web Content Filtering
-
-  <img width="1467" height="1006" alt="image" src="https://github.com/user-attachments/assets/cd132687-9069-42bc-97ee-285910286be8" />
-  
-
----
-
-# **Importing the Policies**
-
-The policies contained in this repository are designed to be imported using **MickeM's Intune Management Tool**.
-
-
-1. Download Micke M Intune Management Tool from here:  https://github.com/Micke-K/IntuneManagement
-2. Extract folder and Start with start.cmd in the folder (works without local administrator rights on Windows and MacOS)   
-   <img width="635" height="247" alt="image" src="https://github.com/user-attachments/assets/ae7405c2-17cb-43a1-a96e-cd60181a2619" />
-
-3. Command window and UI will open
-4. Press on icon in upper right corner to sign in
-   <img width="1311" height="965" alt="image" src="https://github.com/user-attachments/assets/2e835f79-5e07-4c7d-bd7c-5bd4976fde50" />
-
-5. You may need a Global Administrator to consent to required API permissions first time if have not used these tool before. This can be done after sign-in by pressing same icon in upper right corner once more and press "Request Consent". Command Graph Command Line Tools application will be registered in Entra. Feel free to remove it after import or remove at least admin consent.
-
-   <img width="294" height="145" alt="image" src="https://github.com/user-attachments/assets/675ebdc9-dc87-4633-bfa5-fbb92f7ba53d" />
-
-
-6. After sign in and admin consent navigate to Bulk button in the left upper corner and press Import
-
-   <img width="273" height="202" alt="image" src="https://github.com/user-attachments/assets/9e8b32ce-93fe-4ef8-9c19-325d138add8c" />
-
-7. Download project and unzip folder
-
-<img width="401" height="373" alt="image" src="https://github.com/user-attachments/assets/b4005205-abc8-4e9b-a8b0-d6f919f99c06" />
-
-   
-9. Choose SettingsCatalog, CompliancePolicies, Conditional Access, Named Locations and Authentication context in menu, remove everything else.
-
-> [!IMPORTANT]
-> **10. On Conditional Access state- SELECT OFF. Very important.**
- 
-Uncheck import assignments if you don't want to to import groups, named locations and authentication context. PS: Many policies will fail on import here.
-
-10. Check results on your tenant and if something is missing in CMD window. 
-
-
-## After import
-
-# AppControl
-
-App Control Managed Installer policy can't be improted as .json and needs to be setup manually, set it up before deploying App Control policy to your devices. Remember to double check that IME - Intune Managed Extension is installed on device, before enforcing policy for AppControl otherwise it wouldn't work. If it's not installing IME extension with Installer policy, than try to deploy an WIN32 app from Intune first
-
-Policy name: ALSO – HI – BP – Advanced – v1.0- Windows -WDAC/AppControl- Enable Intune Managed Extension as Managed installer
-
-<img width="1170" height="712" alt="image" src="https://github.com/user-attachments/assets/39cc4df6-c872-4e45-9c98-88323cba8c4b" />
-
-
-## Blocking access to all known Non-Microsoft AI Sites
-
-Once Defender for Endpoint and Cloud App integration is setup and you have device group in Defender go to Cloud Apps-> Cloud Apps Catalog --> Select All Gen AI and other AI apps , exclude non MS apps by tagging NON MS apps as Microsoft and than create a filter like on last picture
-
-<img width="1805" height="1231" alt="image" src="https://github.com/user-attachments/assets/5d4366ae-b55c-4725-afe9-8e8fc2e53c8d" />
-
-<img width="744" height="349" alt="image" src="https://github.com/user-attachments/assets/2d662bf3-17ef-42c0-ba4f-17c7769b9785" />
-
-Than choose Select ALl and Tag them as Unsanctioned and select Device Group
-
-## Blocking all well known proxies
-
-In Settings -> Endpoint -> Web Content Filtering create a pplicy to Block "Illegal software", Illegal Software category contains well known proxies
-<img width="1225" height="1202" alt="image" src="https://github.com/user-attachments/assets/d924548f-3f52-46b5-9bbc-3d7c89c68900" />
-
-
-## Blocking 3 party Teams apps
-
-Go to https://admin.teams.microsoft.com/policies/manage-apps
-Actions -> Org wide setings 
-<img width="1667" height="555" alt="image" src="https://github.com/user-attachments/assets/931d6098-318d-4108-8069-eb5768cc732b" />
-
-Choose this setting and save 
-
-<img width="364" height="862" alt="image" src="https://github.com/user-attachments/assets/717d7b80-ca5c-4947-a349-a73ffe08cd32" />
-
-
-## Require compliant device on sign in with Conditional Access
-
-
-## BP-ALSO-CA205-Internals-AllApps-Windows-Grant-RequireCompliantDevice
-
-Requires Windows devices to be compliant before internal users can access cloud applications. Remember to set compliance requirements in Intune for Windows first. Check Windows repo to find compliance templates for Windows. PS: Verify the included group(s) and/or add your custom groups which have all internals in it. ALSO- All Internals is added as an example. This group needs to be imported to Entra, otherwise policy will fail on import with following message:
-
-```text
-Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df5ea509-9005-47d1-9d00-8852534700ac). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request
-```
-
----
-
-## BP-ALSO-CA204-Internals-AllApps-AnyPlatform-Block-UnknownPlatforms
-
-Blocks internal users from signing in using unsupported or unrecognized device platforms. PS: Verify the included group(s) and/or add your custom groups which have all internals in it. ALSO- All Internals is added as an example. This group needs to be imported to Entra, otherwise policy will fail on import with following message:
-
-```text
-Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df5ea509-9005-47d1-9d00-8852534700ac). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request
-
-
-```
-
-## Agent 365 Conditional Access policies
-
-## 🤖 Agent Policies
-
-> [!IMPORTANT]
-> **All Agent policies (CA501-CA505) require an Agent 365 license to be assigned and Agent 365 portal onboarding to be completed before import. Otherwise, the policies will fail during import and display the following error message.**
-
-```text
-"Failed to invoke MS Graph with URL https://graph.microsoft.com/beta/identity/conditionalAccess/policies (Request ID: df32d38d-3943-4a55-bfbc-e1e892358ebb). Status code: BadRequest. Response message: The server could not process the request because it is malformed or incorrect. Exception: The remote server returned an error: (400) Bad Request."
-```
-
-### A365-ALSO-CA501-Agents-AllApps-AnyPlatform-Block-HighRiskAgent
-
-Prevents agent identities from accessing tenant resources when Microsoft identifies the agent as having a high risk level
-
----
-
-### A365-ALSO-CA502-Agents-AllAgentIdentities-AllAgentResources-Block-AllExceptSelected
-
-Denies access for all agent identities by default. Only explicitly approved or excluded agents are permitted. Agent approval can also be managed through the Agent 365 portal 
-
----
-
-### A365-ALSO-CA503-Agents-AllAgentUsers-Grant-RequireCompliantDevice
-
-Restricts agent user access to devices that meet organizational compliance requirements.
-
----
-
-### A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents
-
-Blocks agent users when Microsoft Entra ID Protection classifies the identity as medium or high risk.
-
----
-
-### A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Grant-RequireCompliantNetWork
-
-Allows agent user access only from locations connected through the Global Secure Access compliant network.
-
-
-## Issues?
-
-Open issue here: https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/issues
+## 📦 Package and folder mapping
+
+Each top-level package is complete and standalone. Choose one package; do not combine package folders.
+
+| Package folder | JSON files | Conditional Access | License mapping |
+| --- | ---: | ---: | --- |
+| [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) | 24 | 2 BP policies | Microsoft 365 Business Premium, E3, E5, F1, or F3 combinations that do not include Agent 365 policy use. |
+| [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7) | 29 | 2 BP + 5 A365 policies | Microsoft 365 E7, or a listed Microsoft 365/Defender/Purview combination with Agent 365. |
+
+> [!WARNING]
+> The E7 package is cumulative. The five A365 Conditional Access artifacts exist only in `ALSO_AI_SECURITY_WINDOWS11_E7`; do not copy them into the BP package.
+
+## 🌐 Coverage and capabilities
+
+| Area | BP | E7 |
+| --- | ---: | ---: |
+| Settings Catalog | 12 | 12 |
+| Compliance policies | 4 | 4 |
+| BP Conditional Access policies | 2 | 2 |
+| A365 Conditional Access policies | 0 | 5 |
+| Groups | 4 | 4 |
+| Named locations | 1 | 1 |
+| Migration table | 1 | 1 |
+
+- Application installation and execution controls, Microsoft Edge controls, Microsoft Store restrictions, and proxy-bypass controls.
+- Windows compliance requirements and Conditional Access for corporate-managed devices.
+- Defender for Endpoint and Defender for Cloud Apps configuration for non-Microsoft AI service controls.
+- E7-only Agent 365 controls for agent identity risk, resource access, compliant devices, and compliant networks.
+
+Policy names describe intent; the JSON settings, assignments, exclusions, dependencies, and tenant configuration determine actual behavior.
+
+## 🚀 Getting started
+
+1. Choose exactly one package using the licensing guide and [package comparison](docs/public/policy-collections.md).
+2. Review the [general prerequisites](docs/public/general-prerequisites.md), [platform and AI prerequisites](docs/public/platform-and-ai-prerequisites.md), [dependencies](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY).
+3. Inspect every selected artifact and map tenant-specific groups, locations, assignments, exclusions, and other references.
+4. Follow [How to import](docs/public/how-to-import.md), import Conditional Access policies in **OFF** state, and validate with a controlled pilot before enabling them.
