@@ -59,24 +59,6 @@ All other Defender-related configurations may require additional licensing.
 
 > **Important:** Microsoft 365 F1 supports deployment of Intune configuration settings only. Microsoft Defender security policy settings included in this repository are not supported with F1 licensing.
 
-<details>
-<summary>Previously authored package wording preserved verbatim</summary>
-
-```text
-Choose one standalone package. The packages are cumulative: E5 contains every BP-compatible export plus any E5-only exports. The current repository has no E5-only exports, so both packages contain the same 39 source artifacts.
-
-### ✅ `ALSO_W11AISECURITY_E7` — full experience
-
-### ⚠️ `ALSO_W11AISECURITY_E5` — without Agent 365 policies
-
-Use [`ALSO_CA_E5`](ALSO_CA_E5) for all standard BP and E5 Conditional Access policies, excluding policies tagged `A365`.
-
-### ⚠️ `ALSO_W11AISECURITY_BP` — baseline policies
-
-Use [`ALSO_CA_BP`](ALSO_CA_BP) for baseline Conditional Access policies. This package excludes policies tagged `E5` and `A365`.
-```
-
-</details>
 
 ---
 
