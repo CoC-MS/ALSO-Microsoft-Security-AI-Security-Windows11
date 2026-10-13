@@ -13,19 +13,52 @@ Use the [licensing guide in the main README](../../README.md#windows-11-ai-secur
 
 Confirm current product names, feature availability, and entitlements with Microsoft before deployment. A policy filename is not proof that its required features are licensed in a tenant.
 
-## Tenant preparation
+## Before importing ALSO_AI_SECURITY_POLICIES
 
-- Use an account authorized to review and import Intune and Conditional Access configuration.
-- Preserve emergency-access accounts and test exclusions before enabling Conditional Access.
-- Review every assignment, exclusion, group, named location, application, and tenant-specific identifier.
-- Configure Windows compliance requirements before using compliant-device Conditional Access.
-- Complete Agent 365 licensing and portal onboarding before importing CA501–CA505.
 
-## Deployment readiness
+# **Microsoft Intune setup**
+  - Microsoft Intune must be configured as the Mobile Device Management (MDM) authority.
 
-- Download one standalone package only; do not combine BP and E7 folders.
-- Review JSON settings and dependencies before import.
-- Import Conditional Access policies in **OFF** state.
-- Validate with a controlled pilot, sign-in evidence, device compliance, and expected access behavior before broader deployment.
+  intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
 
-Continue with [Platform and AI prerequisites](platform-and-ai-prerequisites.md) and [Dependencies and import errors](dependencies-and-import-errors.md).
+  <img width="1115" height="807" alt="image" src="https://github.com/user-attachments/assets/ae1527dd-0e7f-46c0-b63e-18d8f24ec2db" />
+
+
+#  **Microsoft Defender for Endpoint Integration**
+  - In the Microsoft Defender portal, navigate to:
+
+    Settings -> Endpoint
+
+  - Enable the **Microsoft Intune connection**.
+<img width="1451" height="609" alt="image" src="https://github.com/user-attachments/assets/fed83e08-2029-4e95-9775-16d872e20bdc" />
+
+
+
+ # **Microsoft Defender for Cloud Apps Integration**
+  - In the Microsoft Defender portal, navigate to:
+
+   Settings -> Endpoints
+
+  - Microsoft Defender for Cloud Apps (MDCA)
+
+  <img width="1467" height="1081" alt="image" src="https://github.com/user-attachments/assets/018f04ec-5ab3-4577-9f39-41f53b1fca68" />
+
+And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
+
+<img width="1415" height="822" alt="image" src="https://github.com/user-attachments/assets/d87e30ea-ced1-46e5-a815-ff1cb81ea8e0" />
+
+
+#  **Endpoint Features**
+  - In the Microsoft Defender portal, navigate to:
+
+    Settings -> Endpoints
+
+  - Ensure the following features are enabled:
+    - Custom Network Indicators
+    - Web Content Filtering
+
+  <img width="1467" height="1006" alt="image" src="https://github.com/user-attachments/assets/cd132687-9069-42bc-97ee-285910286be8" />
+
+
+---
+
