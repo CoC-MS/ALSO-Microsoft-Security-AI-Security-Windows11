@@ -25,9 +25,17 @@ At least Conditional Access Administrator role assigned
 > **Always import Conditional Access policies in OFF mode**:
 > Ensure you have Conditional Access Administrator role before importing Conditional Access policies and that your Security defaults are turned off. To check if your tenant are using Security defaults use this direct link here:
 
-https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView/initialValue//tabId//recommendationResourceId//fromNav/Identity
+Direct link: https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView/initialValue//tabId//recommendationResourceId//fromNav/Identity
 
 <img width="1559" height="197" alt="image" src="https://github.com/user-attachments/assets/b947568d-76d3-4a93-ae4a-5e293c68e59a" />
+
+# **Agent 365 setup** only for E7 package
+
+At least AI Administrator role 
+
+1. Go to admin.microsoft.com -> Agents-> Overview and ensure your Agent 365 instance is active and in onbaorded state
+
+Direct link: https://admin.cloud.microsoft/#/agents/overview
 
 # **Microsoft Intune setup**
 
