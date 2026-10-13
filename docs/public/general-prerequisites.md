@@ -38,7 +38,7 @@ We reccomend these settings to be set and using LAPS for all local admin activit
 <img width="689" height="418" alt="image" src="https://github.com/user-attachments/assets/390114b9-d97e-49b6-8513-a0715409a62c" />
 
 > [!IMPORTANT]
-> **If you already have local administrators on devices today, you would need to remove those rights as well**
+> **If you already have local administrators on devices today, you would need to remove those rights using different methods available**
 
 > **If you allow device registrations, you'll need to ensure you have control on those**
 
