@@ -29,7 +29,6 @@ Use the E7 package when the tenant is licensed and onboarded for Agent 365. It i
 - `A365-ALSO-CA504-Agents-AllAgentUsers-AllResources-Block-RiskyAgents.json`
 - `A365-ALSO-CA505-Agents-AllAgentUsers-AllResources-Block-RequireCompliantNetWork.json`
 
-The first four A365 artifacts were already present in this repository and match Conditional Access `main`. CA505 is copied byte-for-byte from `CoC-MS/ALSO-Microsoft-Security-Conditional-Access` commit `b4658f7d034cfc9818d6b053baf455171fd8810c`, Git blob `1585e1406ab751110e511500e39594e53e6c6338`, SHA-256 `e884017a8b50439bb0fb007588b0e58b62d8fc85f83b02e5b121f55c85ffdad6`.
 
 > [!WARNING]
 > Do not combine package folders. Review licensing, settings, dependencies, assignments, and exclusions before use, and import Conditional Access policies in **OFF** state.
