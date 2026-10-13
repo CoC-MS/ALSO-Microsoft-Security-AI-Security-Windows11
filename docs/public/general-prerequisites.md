@@ -27,7 +27,7 @@ Confirm current product names, feature availability, and entitlements with Micro
 
 
 
-#  **Microsoft Defender for Endpoint Integration**
+#  **Microsoft Defender for Endpoint/ Business Integration**
   - In the Microsoft Defender portal, navigate to:
 
     Settings -> Endpoint
