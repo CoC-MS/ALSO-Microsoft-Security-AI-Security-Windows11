@@ -19,14 +19,5 @@ Partner-facing guidance for selecting, reviewing, importing, and validating the 
 
 Start with [General prerequisites](general-prerequisites.md), choose exactly one package, review its policies and dependencies, then follow [How to import](how-to-import.md).
 
-## Historical resource links
-
-The following source links are retained verbatim:
-
-| Resource | Description |
-|-----------|-------------|
-| 🛡️ **Security Information** | [View Security Policy](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file) |
-| 📖 **Supported licenses** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/blob/main/README.md#works-with-following-licenses) |
-| 📖 **Before importing ALSO_AI_SECURITY_POLICIES** | [View description](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11#before-importing-also_ai_security_policies) |
 
 ----
