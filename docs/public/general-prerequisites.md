@@ -39,7 +39,9 @@ We reccomend these settings to be set and using LAPS for all local admin activit
 
 > [!IMPORTANT]
 > **If you already have local administrators on devices today, you would need to remove those rights as well**:
-
+> **If you allow device registrations, you'll need to ensure you have control on those**
+> **If you are using Autopilot only, you can handle local admin settings easy in your autopilot profile**
+> **If you are using hybrid-joined, you can handle local admin rights with GP settings**
 
 # **Agent 365 setup** only for E7 package
 
