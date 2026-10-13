@@ -2,7 +2,7 @@
 
 [Public documentation](README.md)
 
-Review [General prerequisites](general-prerequisites.md), [Platform and AI prerequisites](platform-and-ai-prerequisites.md), [Dependencies and import errors](dependencies-and-import-errors.md), and the selected package before starting.
+Review [General prerequisites](general-prerequisites.md), [Windows 11 requirements](platform-and-ai-prerequisites.md), [Dependencies and import errors](dependencies-and-import-errors.md), and the selected package before starting.
 
 # **Importing the Policies**
 
