@@ -15,8 +15,24 @@ Confirm current product names, feature availability, and entitlements with Micro
 
 ## Before importing ALSO_AI_SECURITY_POLICIES
 
+# **Conditional Access setup**
+
+For Conditional Access:
+
+At least Conditional Access Administrator role assigned
+
+> [!IMPORTANT]
+> **Always import Conditional Access policies in OFF mode**:
+> Ensure you have Conditional Access Administrator role before importing Conditional Access policies and that your Security defaults are turned off. To check if your tenant are using Security defaults use this direct link here:
+
+https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView/initialValue//tabId//recommendationResourceId//fromNav/Identity
+
+<img width="1559" height="197" alt="image" src="https://github.com/user-attachments/assets/b947568d-76d3-4a93-ae4a-5e293c68e59a" />
 
 # **Microsoft Intune setup**
+
+At least Intune Administrator role required 
+
   - Microsoft Intune must be configured as the Mobile Device Management (MDM) authority.
 
   intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
@@ -28,6 +44,9 @@ Confirm current product names, feature availability, and entitlements with Micro
 
 
 #  **Microsoft Defender for Endpoint/ Business Integration**
+
+At least Security Administrator role required 
+
   - In the Microsoft Defender portal, navigate to:
 
     Settings -> Endpoint
