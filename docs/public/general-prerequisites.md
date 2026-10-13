@@ -21,7 +21,10 @@ Confirm current product names, feature availability, and entitlements with Micro
 
   intune.microsoft.com->Devices-> Enrollment -> Automatic Enrollment
 
+  Direct link: https://intune.microsoft.com/#view/Microsoft_AAD_IAM/MdmConfiguration.ReactView/appId/0000000a-0000-0000-c000-000000000000/appName/Microsoft%20Intune
+
   <img width="1115" height="807" alt="image" src="https://github.com/user-attachments/assets/ae1527dd-0e7f-46c0-b63e-18d8f24ec2db" />
+
 
 
 #  **Microsoft Defender for Endpoint Integration**
@@ -30,6 +33,9 @@ Confirm current product names, feature availability, and entitlements with Micro
     Settings -> Endpoint
 
   - Enable the **Microsoft Intune connection**.
+
+Direct link: https://security.microsoft.com/securitysettings/endpoints/integration?tid
+
 <img width="1451" height="609" alt="image" src="https://github.com/user-attachments/assets/fed83e08-2029-4e95-9775-16d872e20bdc" />
 
 
@@ -41,14 +47,18 @@ Confirm current product names, feature availability, and entitlements with Micro
 
   - Microsoft Defender for Cloud Apps (MDCA)
 
+Direct link: https://security.microsoft.com/securitysettings/endpoints/integration?tid
+
   <img width="1467" height="1081" alt="image" src="https://github.com/user-attachments/assets/018f04ec-5ab3-4577-9f39-41f53b1fca68" />
 
 And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
 
+Direct link: https://security.microsoft.com/cloudapps/settings?tabid=app-control&tid
+
 <img width="1415" height="822" alt="image" src="https://github.com/user-attachments/assets/d87e30ea-ced1-46e5-a815-ff1cb81ea8e0" />
 
 
-#  **Endpoint Features**
+# For Defender for Business customers only- Custom Indicators and Web Content filtering **Endpoint Features**
   - In the Microsoft Defender portal, navigate to:
 
     Settings -> Endpoints
@@ -56,6 +66,8 @@ And Settings -> Cloud Apps --> Microsoft Defender for Endpoint
   - Ensure the following features are enabled:
     - Custom Network Indicators
     - Web Content Filtering
+
+Direct link: https://security.microsoft.com/securitysettings/endpoints/integration?tid
 
   <img width="1467" height="1006" alt="image" src="https://github.com/user-attachments/assets/cd132687-9069-42bc-97ee-285910286be8" />
 
