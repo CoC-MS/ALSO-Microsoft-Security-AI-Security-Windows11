@@ -78,7 +78,7 @@ All other Defender-related configurations may require additional licensing.
 | 📂 **[File structure](docs/public/file-structure.md)** | Locate each package and artifact category. |
 | 📥 **[How to import](docs/public/how-to-import.md)** | Import a selected package in OFF state and validate it. |
 | 🐛 **[Reporting issues](docs/public/reporting-issues.md)** | Report problems without exposing tenant information. |
-| 🛡️ **Security Information** | [View Security Policy](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file) |
+| 🛡️ **[Security Information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)** | View Security information
 | 📜 **[License](LICENSE)** | Read the repository license. |
 
 ---
