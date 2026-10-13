@@ -29,6 +29,18 @@ Direct link: https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.
 
 <img width="1559" height="197" alt="image" src="https://github.com/user-attachments/assets/b947568d-76d3-4a93-ae4a-5e293c68e59a" />
 
+# **Local administrator settings**
+
+Go to entra.microsoft.com -> Devices -> Device settings and check local administrator settings 
+
+We reccomend these settings to be set and using LAPS for all local admin activitites across devices or EPM in Intune (requires Intune Suite or Microsoft 365 E5 to use EPM in Intune)
+
+<img width="689" height="418" alt="image" src="https://github.com/user-attachments/assets/390114b9-d97e-49b6-8513-a0715409a62c" />
+
+> [!IMPORTANT]
+> **If you already have local administrators on devices today, you would need to remove those rights as well**:
+
+
 # **Agent 365 setup** only for E7 package
 
 At least AI Administrator role 
