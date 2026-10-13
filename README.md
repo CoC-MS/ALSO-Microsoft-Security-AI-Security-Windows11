@@ -117,6 +117,6 @@ Policy names describe intent; the JSON settings, assignments, exclusions, depend
 ## 🚀 Getting started
 
 1. Choose exactly one package using the licensing guide above: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
-2. Review the [general prerequisites](docs/public/general-prerequisites.md), [platform and AI prerequisites](docs/public/platform-and-ai-prerequisites.md), [dependencies](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY).
+2. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY).
 3. Inspect every selected artifact and map tenant-specific groups, locations, assignments, exclusions, and other references.
 4. Follow [How to import](docs/public/how-to-import.md), import Conditional Access policies in **OFF** state, and validate with a controlled pilot before enabling them.
