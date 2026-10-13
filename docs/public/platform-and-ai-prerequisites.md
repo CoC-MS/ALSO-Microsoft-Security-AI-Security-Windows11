@@ -1,5 +1,7 @@
 # 🤖 Windows OS requirements
 
-[Public documentation](README.md)
+Windows 11 Enterprise, IoT Enterprise, Education, Pro, Pro Education including Windows on Arm
+
+Source: Microsoft Learn
 
 
