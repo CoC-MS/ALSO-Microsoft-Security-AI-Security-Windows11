@@ -69,8 +69,8 @@ All other Defender-related configurations may require additional licensing.
 | Resource | Description |
 | --- | --- |
 | 📖 **[Public documentation](docs/public/README.md)** | Start with the complete documentation index. |
-| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Review licensing, tenant preparation, and deployment readiness. |
-| 🤖 **[Platform and AI prerequisites](docs/public/platform-and-ai-prerequisites.md)** | Configure Intune, Defender, Defender for Cloud Apps, App Control, AI-site controls, proxy controls, and Teams. |
+| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Review licensing, tenant preparation, configure Intune, Defender, Defender for Cloud Apps |
+| 🤖 **[Windows requirements](docs/public/platform-and-ai-prerequisites.md)** | Review Windows OS requirements |
 | 📦 **[Policy collections](docs/public/policy-collections.md)** | Compare the package contents and select one standalone package. |
 | 🔐 **[Conditional Access policy guide](docs/public/conditional-access-policies.md)** | Review the internal-user and Agent 365 Conditional Access policies. |
 | 🧩 **[Dependencies and import errors](docs/public/dependencies-and-import-errors.md)** | Resolve referenced groups, compliant-device prerequisites, networks, and concrete Graph errors. |
