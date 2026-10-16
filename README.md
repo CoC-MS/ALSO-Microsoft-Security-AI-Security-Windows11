@@ -11,6 +11,34 @@
 > [!IMPORTANT]
 > **⚠️ IMPORTANT: Read this before importing and using any policies.**
 
+<a id="getting-started"></a>
+## 🚀 Getting started
+
+1. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY) ([GitHub Security information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)). Choose exactly one package using the licensing guide below: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
+2. [Download the repository ZIP](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/archive/refs/heads/main.zip) and follow [How to import](docs/public/how-to-import.md) for extraction guidance.
+3. Follow [How to import](docs/public/how-to-import.md) to import the selected package without assignments. Inspect every selected artifact and map tenant-specific groups, locations, assignments, exclusions, and other references. The import guide warns that many policies may fail to import when assignments are unchecked.
+4. Follow [How to import](docs/public/how-to-import.md), import Conditional Access policies in **OFF** state, and validate with a controlled pilot before enabling them. Check policy deployment reports and user impact, then expand in stages.
+
+For controlled rollouts, we recommend using Microsoft's [deployment plans](https://learn.microsoft.com/en-us/intune/device-management/deployments/overview). This Intune feature is currently in public preview.
+
+**Need help or have feedback?** See [Reporting issues](docs/public/reporting-issues.md) to report problems or suggest improvements.
+
+> [!WARNING]
+> Public issues are visible to everyone. Do not attach tenant exports, credentials, tokens, certificates or private keys, customer details, tenant/user/device IDs, group memberships, assignments, or unredacted logs and screenshots. Provide a minimal redacted example instead.
+
+### Quick navigation
+
+| Section | What you will find |
+| --- | --- |
+| [Getting started](#getting-started) | Prerequisites, download, import, and staged rollout. |
+| [Windows 11 AI Security Licensing Guide](#windows-11-ai-security-licensing-guide) | License compatibility and limitations. |
+| [Windows 11 AI Security packages](#windows-11-ai-security-packages) | Compare the BP and E7 packages. |
+| [Coverage and capabilities](#coverage-and-capabilities) | Areas covered by this repository. |
+| [Documentation](#documentation) | Links to supporting guides and the repository license. |
+
+---
+
+<a id="windows-11-ai-security-licensing-guide"></a>
 ## Windows 11 AI Security Licensing Guide
 
 Choose one standalone package. The available packages are cumulative: E7 contains every BP artifact plus the five Agent 365 Conditional Access policies.
@@ -43,7 +71,7 @@ Use this package for the baseline Windows 11 artifacts and the two BP Conditiona
 | Business Premium + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
 | Microsoft 365 F3 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
 | Microsoft 365 F1 + Defender Suite and/or Purview Suite | ⚠️ Supports all policies except A365 |
-| Microsoft 365 E3 | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering)|
+| Microsoft 365 E3 | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering) |
 | Microsoft 365 Business Premium | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering) |
 | Microsoft 365 F3 | ⚠️ Supports everything except A365 policies and full Defender for Cloud Apps exrpeience (only custom indicators and content filtering) |
 | Microsoft 365 F1 | ⚠️ All policies except Defender and A365 |
@@ -63,26 +91,9 @@ All other Defender-related configurations may require additional licensing.
 
 > **Important:** Microsoft 365 F1 supports deployment of Intune configuration and BP Conditional access policies only. Microsoft Defender security policy settings and A365 Conditional access policies included in this repository are not supported with F1 licensing.
 
-
 ---
 
-| Resource | Description |
-| --- | --- |
-| 📖 **[Public documentation](docs/public/README.md)** | Start with the complete documentation index. |
-| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Review licensing, tenant preparation, configure Intune, Defender, Defender for Cloud Apps |
-| 🤖 **[Windows requirements](docs/public/platform-and-ai-prerequisites.md)** | Review Windows OS requirements |
-| 📦 **[Policy collections](docs/public/policy-collections.md)** | Compare the package contents and select one standalone package. |
-| 🔐 **[Conditional Access policy guide](docs/public/conditional-access-policies.md)** | Review the internal-user and Agent 365 Conditional Access policies. |
-| 🧩 **[Dependencies and import errors](docs/public/dependencies-and-import-errors.md)** | Resolve referenced groups, compliant-device prerequisites, networks, and concrete Graph errors. |
-| 📖 **[Policy naming](docs/public/policy-naming.md)** | Understand the device and Conditional Access naming components. |
-| 📂 **[File structure](docs/public/file-structure.md)** | Locate each package and artifact category. |
-| 📥 **[How to import](docs/public/how-to-import.md)** | Import a selected package in OFF state and validate it. |
-| 🐛 **[Reporting issues](docs/public/reporting-issues.md)** | Report problems without exposing tenant information. |
-| 🛡️ **[Security Information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)** | View Security information
-| 📜 **[License](LICENSE)** | Read the repository license. |
-
----
-
+<a id="windows-11-ai-security-packages"></a>
 ## 📦 Windows 11 AI Security packages
 
 Each top-level package is complete and standalone. Choose one package; do not combine package folders.
@@ -95,6 +106,7 @@ Each top-level package is complete and standalone. Choose one package; do not co
 > [!WARNING]
 > The E7 package is cumulative. The five A365 Conditional Access artifacts exist only in `ALSO_AI_SECURITY_WINDOWS11_E7`; do not copy them into the BP package.
 
+<a id="coverage-and-capabilities"></a>
 ## 🌐 Coverage and capabilities
 
 | Area | BP | E7 |
@@ -114,9 +126,19 @@ Each top-level package is complete and standalone. Choose one package; do not co
 
 Policy names describe intent; the JSON settings, assignments, exclusions, dependencies, and tenant configuration determine actual behavior.
 
-## 🚀 Getting started
+---
 
-1. Choose exactly one package using the licensing guide above: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
-2. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY).
-3. Inspect every selected artifact and map tenant-specific groups, locations, assignments, exclusions, and other references.
-4. Follow [How to import](docs/public/how-to-import.md), import Conditional Access policies in **OFF** state, and validate with a controlled pilot before enabling them.
+<a id="documentation"></a>
+## 📚 Documentation
+
+| Documentation | Overview |
+| --- | --- |
+| 📖 **[Public documentation](docs/public/README.md)** | Start with the complete documentation index. |
+| 🚀 **[General prerequisites](docs/public/general-prerequisites.md)** | Review licensing, tenant preparation, configure Intune, Defender, Defender for Cloud Apps |
+| 🤖 **[Windows requirements](docs/public/platform-and-ai-prerequisites.md)** | Review Windows OS requirements |
+| 📦 **[Policy collections](docs/public/policy-collections.md)** | Compare the package contents and select one standalone package. |
+| 🔐 **[Conditional Access policy guide](docs/public/conditional-access-policies.md)** | Review the internal-user and Agent 365 Conditional Access policies. |
+| 🧩 **[Dependencies and import errors](docs/public/dependencies-and-import-errors.md)** | Resolve referenced groups, compliant-device prerequisites, networks, and concrete Graph errors. |
+| 📖 **[Policy naming](docs/public/policy-naming.md)** | Understand the device and Conditional Access naming components. |
+| 📂 **[File structure](docs/public/file-structure.md)** | Locate each package and artifact category. |
+| 📜 **[License](LICENSE)** | Read the repository license. |
