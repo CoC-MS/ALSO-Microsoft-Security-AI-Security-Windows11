@@ -12,8 +12,11 @@
 <a id="getting-started"></a>
 ## 🚀 Getting started
 
-1. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)). Choose exactly one package using the licensing guide below: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
-2. Follow [How to import](docs/public/how-to-import.md) for extraction and import guidance.
+1. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)).
+2. Choose exactly one package using the licensing guide below: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
+3. Follow [How to import](docs/public/how-to-import.md) for extraction and import guidance.
+4. Assign reviewed policies to a pilot group, check policy deployment reports and device/user impact, then expand in stages.
+
 
 
 For controlled rollouts, we recommend using Microsoft's [deployment plans](https://learn.microsoft.com/en-us/intune/device-management/deployments/overview). This Intune feature is currently in public preview.
