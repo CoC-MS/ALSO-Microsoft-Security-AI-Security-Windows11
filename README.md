@@ -16,8 +16,7 @@
 
 1. Review the [general prerequisites](docs/public/general-prerequisites.md), [Windows 11 requirements](docs/public/platform-and-ai-prerequisites.md), [dependencies and error handling](docs/public/dependencies-and-import-errors.md), and [security information](SECURITY) ([GitHub Security information](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/tree/main?tab=security-ov-file)). Choose exactly one package using the licensing guide below: [`ALSO_AI_SECURITY_WINDOWS11_BP`](ALSO_AI_SECURITY_WINDOWS11_BP) or [`ALSO_AI_SECURITY_WINDOWS11_E7`](ALSO_AI_SECURITY_WINDOWS11_E7).
 2. [Download the repository ZIP](https://github.com/CoC-MS/ALSO-Microsoft-Security-AI-Security-Windows11/archive/refs/heads/main.zip) and follow [How to import](docs/public/how-to-import.md) for extraction guidance.
-3. Follow [How to import](docs/public/how-to-import.md) to import the selected package without assignments. Inspect every selected artifact and map tenant-specific groups, locations, assignments, exclusions, and other references. The import guide warns that many policies may fail to import when assignments are unchecked.
-4. Follow [How to import](docs/public/how-to-import.md), import Conditional Access policies in **OFF** state, and validate with a controlled pilot before enabling them. Check policy deployment reports and user impact, then expand in stages.
+3. Follow [How to import](docs/public/how-to-import.md) 
 
 For controlled rollouts, we recommend using Microsoft's [deployment plans](https://learn.microsoft.com/en-us/intune/device-management/deployments/overview). This Intune feature is currently in public preview.
 
