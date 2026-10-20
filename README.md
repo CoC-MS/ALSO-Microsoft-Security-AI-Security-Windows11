@@ -1,11 +1,5 @@
 # 🛡️ ALSO Microsoft Security AI Security Windows 11 Policy Templates
 
-**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
-
-**Enterprise licenses:** [Microsoft Enterprise Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
-
-**SMB licenses:** [Microsoft SMB Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
-
 >This baseline delivers a hardened Windows 11 configuration that minimizes the risk of unauthorized third-party AI access while maintaining a productive user experience. It restricts application installation and execution, enforces Microsoft Edge as the approved browser, blocks Microsoft Store and proxy bypass methods, limits access to non-Microsoft AI services, and requires compliant corporate-managed devices through Conditional Access policies. The baseline also includes Agent 365 Conditional Access controls for AI agent governance. Although designed as a high-security configuration, all settings can be customized to meet organizational requirements.
 
 > [!IMPORTANT]
@@ -96,6 +90,12 @@ For Microsoft 365 F3, only the following Microsoft Defender security settings ar
 All other Defender-related configurations may require additional licensing.
 
 > **Important:** Microsoft 365 F1 supports deployment of Intune configuration and BP Conditional access policies only. Microsoft Defender security policy settings and A365 Conditional access policies included in this repository are not supported with F1 licensing.
+
+**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
+
+**Enterprise licenses:** [Microsoft Enterprise Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
+
+**SMB licenses:** [Microsoft SMB Plan Comparison](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-Enterprise.pdf)
 
 ---
 
