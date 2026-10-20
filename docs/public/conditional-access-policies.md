@@ -1,5 +1,7 @@
 # 🔐 Conditional Access policy guide
 
+**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
+
 [Public documentation](README.md)
 
 Review each JSON's complete conditions, assignments, exclusions, grant controls, and session controls before use; names alone do not describe the full configuration.

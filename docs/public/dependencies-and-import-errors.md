@@ -1,5 +1,7 @@
 # 🧩 Dependencies and import errors
 
+**Disclaimer:** Licensing prerequisites and feature availability listed on this page may be incorrect, incomplete, or outdated. We strongly recommend verifying all licensing information against the latest official Microsoft licensing documentation before making any purchasing or deployment decisions.
+
 [Public documentation](README.md)
 
 Valid JSON can still fail when referenced groups, named locations, device compliance, compliant networks, Agent 365 capabilities, or other tenant objects are absent or not mapped.
